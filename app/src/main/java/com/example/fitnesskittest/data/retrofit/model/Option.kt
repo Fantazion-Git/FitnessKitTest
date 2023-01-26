@@ -1,4 +1,4 @@
-package com.example.fitnesskittest.model
+package com.example.fitnesskittest.data.retrofit.model
 
 import android.graphics.Color
 

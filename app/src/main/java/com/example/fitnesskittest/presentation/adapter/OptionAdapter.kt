@@ -1,22 +1,25 @@
+/*
 package com.example.fitnesskittest.adapter
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.view.ViewGroup
-import com.example.fitnesskittest.model.Lesson
+import android.widget.ImageView
+import android.widget.TextView
 import com.example.fitnesskittest.model.Option
-import com.example.fitnesskittest.model.Tab
-import com.example.fitnesskittest.model.Trainer
 
-class FitnessAdapter(
-    private val context : Context,
-    private val lessonList: MutableList<Lesson>,
-    private val optionList: MutableList<Option>,
-    private val tabList: MutableList<Tab>,
-    private val trainerList: MutableList<Trainer>
-): RecyclerView.Adapter<FitnessAdapter.MyViewHolder>() {
+class OptionAdapter(
+    private val context: Context,
+    private val optionList: MutableList<Option>
+) : RecyclerView.Adapter<OptionAdapter.MyViewHolder>() {
+
+
     class MyViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+        val image: ImageView = itemView.image_movie
+        val txt_name: TextView = itemView.txt_name
+        val txt_team: TextView = itemView.txt_team
+        val txt_createdby: TextView = itemView.txt_createdby
     }
 
     override fun onCreateViewHolder(p0: ViewGroup, p1: Int): MyViewHolder {
@@ -31,3 +34,5 @@ class FitnessAdapter(
         TODO("Not yet implemented")
     }
 }
+
+ */

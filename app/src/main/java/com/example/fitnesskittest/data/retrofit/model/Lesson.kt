@@ -1,4 +1,4 @@
-package com.example.fitnesskittest.model
+package com.example.fitnesskittest.data.retrofit.model
 
 import android.graphics.Color
 import java.sql.Date
@@ -8,7 +8,7 @@ data class Lesson(
     val name: String?=null,
     val description: String?=null,
     val place: String?=null,
-    val coach_id : Trainer?=null,//Todo доработать всё ниже
+    val coach_id : Trainer?=null,//TODO доработать всё ниже
     val start_time: Time?=null,
     val end_time: Time?=null,
     val date: Date?=null,

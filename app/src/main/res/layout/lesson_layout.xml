@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="8dp"
+    android:layout_margin="8dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <TextView
+            android:id="@+id/text_time_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="start"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/text_time_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="16dp"
+            android:text="stop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_time_start" />
+
+        <TextView
+            android:id="@+id/text_tab_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:text="Tab Name"
+            app:layout_constraintStart_toEndOf="@+id/text_time_start"
+            app:layout_constraintTop_toTopOf="@+id/text_time_start" />
+
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:text="Time"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/text_tab_name"
+            app:layout_constraintTop_toTopOf="@+id/text_tab_name" />
+
+        <ImageView
+            android:id="@+id/persons_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="24dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_time_stop"
+            app:layout_constraintStart_toEndOf="@+id/text_time_stop"
+            app:layout_constraintTop_toTopOf="@+id/text_time_stop"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/text_trainer_fullname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="text_trainer_fullname"
+            app:layout_constraintBottom_toBottomOf="@+id/text_time_stop"
+            app:layout_constraintStart_toEndOf="@+id/persons_img"
+            app:layout_constraintTop_toTopOf="@+id/text_time_stop" />
+
+        <ImageView
+            android:id="@+id/map_img"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_trainer_fullname"
+            app:layout_constraintStart_toEndOf="@+id/text_trainer_fullname"
+            app:layout_constraintTop_toTopOf="@+id/text_trainer_fullname"
+            app:srcCompat="@android:drawable/ic_dialog_map" />
+
+        <TextView
+            android:id="@+id/text_place"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="text_place"
+            app:layout_constraintBottom_toBottomOf="@+id/map_img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/map_img"
+            app:layout_constraintTop_toTopOf="@+id/map_img" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

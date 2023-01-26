@@ -1,4 +1,4 @@
-package com.example.fitnesskittest.model
+package com.example.fitnesskittest.data.retrofit.model
 
 data class Tab(
     val id:Int?=null,
