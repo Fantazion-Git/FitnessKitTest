@@ -8,7 +8,12 @@ class LessonViewHolder(
     private val binding: LessonLayoutBinding
 ) :FitnessViewHolder(binding.root){
     fun bind (model : LessonModel){
-        binding.textTimeStart.text=model.startTime.toString()
+        binding.textTimeStart.text=model.startTime
+        binding.textTime.text=model.time
+        binding.textPlace.text=model.place
+        binding.textTimeStop.text=model.endTime
+        binding.textTabName.text=model.tabName
+        binding.textTrainerFullname.text=model.trainerFullName
         TODO()
     }
 }

@@ -8,6 +8,6 @@ class DayViewHolder (
     private val binding: DayLayoutBinding
 ):FitnessViewHolder(binding.root){
     fun bind(model:DayModel){
-        binding.textView2.text=model.day
+        binding.dayText.text=model.day
     }
 }

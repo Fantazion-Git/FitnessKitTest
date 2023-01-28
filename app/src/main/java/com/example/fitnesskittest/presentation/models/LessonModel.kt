@@ -1,15 +1,14 @@
 package com.example.fitnesskittest.presentation.models
 
 import android.graphics.Color
-import java.util.Date
 
 data class LessonModel(
-    val startTime:Date,
-    val endTime:Date,
+    val startTime:String,
+    val endTime:String,
     val tabName:String,
-    val time: Date,
+    val time: String,
     val trainerFullName:String,
     val place:String,
-    val date:Date,
-    val color:Color
-)
+    val date:String,
+    val color: Color?
+) : FitnessModel
