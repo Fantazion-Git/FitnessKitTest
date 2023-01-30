@@ -1,7 +1,5 @@
 package com.example.fitnesskittest.domain
 
-import android.graphics.Color
-import java.sql.Time
 import java.time.LocalDate
 import java.time.LocalTime
 
@@ -13,5 +11,5 @@ data class Lesson(
     val trainerFullName:String?,
     val place:String?,
     val date:LocalDate?,
-    val color:Color?
+    val color:Int?
 )

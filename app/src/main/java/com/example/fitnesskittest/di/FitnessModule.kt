@@ -7,7 +7,7 @@ import com.example.fitnesskittest.presentation.adapter.FitnessAdapter
 
 object FitnessModule {
     private const val BASE_URL="https://olimpia.fitnesskit-admin.ru/"
-    //TODO функции провайд (в стиле дагера)
+    //функции провайд (в стиле дагера)
     fun provideFitnessAdapter() = FitnessAdapter()
 
     fun provideMainViewModelFactory()= MainViewModelFactory(provideFitnessRepo())

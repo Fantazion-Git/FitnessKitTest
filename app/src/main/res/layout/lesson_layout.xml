@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardElevation="8dp"
-    android:layout_margin="8dp">
+    android:layout_margin="8dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:background="@color/white">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.58"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <TextView
             android:id="@+id/text_time_start"
@@ -21,6 +30,7 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:text="start"
+            android:textColor="#818181"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,16 +42,23 @@
             android:layout_marginTop="32dp"
             android:layout_marginBottom="16dp"
             android:text="stop"
+            android:textColor="#818181"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/text_time_start" />
 
         <TextView
             android:id="@+id/text_tab_name"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:maxLines="1"
             android:text="Tab Name"
+            android:textColor="#818181"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_time_start"
+            app:layout_constraintEnd_toStartOf="@+id/text_time"
             app:layout_constraintStart_toEndOf="@+id/text_time_start"
             app:layout_constraintTop_toTopOf="@+id/text_time_start" />
 
@@ -51,51 +68,89 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:text="Time"
+            android:textColor="#818181"
+            app:layout_constraintBottom_toBottomOf="@+id/text_tab_name"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/text_tab_name"
             app:layout_constraintTop_toTopOf="@+id/text_tab_name" />
 
         <ImageView
             android:id="@+id/persons_img"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="24dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginStart="16dp"
+            android:visibility="visible"
+            app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toBottomOf="@+id/text_time_stop"
             app:layout_constraintStart_toEndOf="@+id/text_time_stop"
             app:layout_constraintTop_toTopOf="@+id/text_time_stop"
-            tools:srcCompat="@tools:sample/avatars" />
+            tools:srcCompat="@drawable/person_img"
+            tools:visibility="visible" />
 
         <TextView
             android:id="@+id/text_trainer_fullname"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="1dp"
+            android:ellipsize="end"
+            android:maxLines="1"
             android:text="text_trainer_fullname"
+            android:textColor="#818181"
+            android:textSize="12sp"
+            app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toBottomOf="@+id/text_time_stop"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/persons_img"
             app:layout_constraintTop_toTopOf="@+id/text_time_stop" />
 
         <ImageView
             android:id="@+id/map_img"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_marginStart="8dp"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginEnd="4dp"
+            app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toBottomOf="@+id/text_trainer_fullname"
-            app:layout_constraintStart_toEndOf="@+id/text_trainer_fullname"
+            app:layout_constraintEnd_toStartOf="@+id/text_place"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/guideline4"
             app:layout_constraintTop_toTopOf="@+id/text_trainer_fullname"
-            app:srcCompat="@android:drawable/ic_dialog_map" />
+            app:srcCompat="@drawable/geo_img" />
 
         <TextView
             android:id="@+id/text_place"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
             android:layout_marginEnd="16dp"
-            android:text="text_place"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="text_placessssssssssssssssssssssssssssssss"
+            android:textColor="#818181"
+            android:textSize="10sp"
+            app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toBottomOf="@+id/map_img"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/map_img"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
             app:layout_constraintTop_toTopOf="@+id/map_img" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintGuide_percent="0.62"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <FrameLayout
+            android:id="@+id/frameL"
+            android:layout_width="5dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        </FrameLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.cardview.widget.CardView>

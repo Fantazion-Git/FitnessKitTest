@@ -12,7 +12,7 @@ class FitnessRepo(
          val  call = services.getLessonsData().awaitResponse()
          val lessonsResult = if (call.isSuccessful) {
              call.body() ?: throw IllegalStateException()
-         } else throw Exception("Своя ошибка тут, можно использовать response.errorBody(), response.code() для обработки")
+         } else throw Exception("Call is NOT Successful (FitnessRepo)")
          return lessonsResult.lessons.map { LessonMapper.mapToDomain(it, lessonsResult.trainers) }
     }
 }

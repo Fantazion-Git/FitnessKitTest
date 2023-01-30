@@ -10,5 +10,5 @@ data class LessonModel(
     val trainerFullName:String,
     val place:String,
     val date:String,
-    val color: Color?
+    val color: Int?
 ) : FitnessModel

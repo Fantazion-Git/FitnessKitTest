@@ -3,7 +3,7 @@ package com.example.fitnesskittest.presentation.view_holders
 import androidx.recyclerview.widget.RecyclerView
 import com.example.fitnesskittest.databinding.LessonLayoutBinding
 import com.example.fitnesskittest.presentation.models.LessonModel
-
+//TODO перименовать
 class LessonViewHolder(
     private val binding: LessonLayoutBinding
 ) :FitnessViewHolder(binding.root){
@@ -14,6 +14,6 @@ class LessonViewHolder(
         binding.textTimeStop.text=model.endTime
         binding.textTabName.text=model.tabName
         binding.textTrainerFullname.text=model.trainerFullName
-        TODO()
+        model.color?.let { binding.frameL.setBackgroundColor(it) }
     }
 }

@@ -54,4 +54,3 @@ class FitnessAdapter(
 
 
 }
-//TODO DiffUtil if u want
