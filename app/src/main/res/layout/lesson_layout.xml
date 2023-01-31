@@ -83,7 +83,7 @@
             app:layout_constraintBottom_toBottomOf="@+id/text_time_stop"
             app:layout_constraintStart_toEndOf="@+id/text_time_stop"
             app:layout_constraintTop_toTopOf="@+id/text_time_stop"
-            tools:srcCompat="@drawable/person_img"
+            app:srcCompat="@drawable/person_img"
             tools:visibility="visible" />
 
         <TextView
@@ -95,7 +95,7 @@
             android:maxLines="1"
             android:text="text_trainer_fullname"
             android:textColor="#818181"
-            android:textSize="12sp"
+            android:textSize="13sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toBottomOf="@+id/text_time_stop"
             app:layout_constraintEnd_toStartOf="@+id/guideline4"
@@ -122,10 +122,10 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:ellipsize="end"
-            android:maxLines="1"
+            android:maxLines="2"
             android:text="text_placessssssssssssssssssssssssssssssss"
             android:textColor="#818181"
-            android:textSize="10sp"
+            android:textSize="12sp"
             app:layout_constrainedWidth="true"
             app:layout_constraintBottom_toBottomOf="@+id/map_img"
             app:layout_constraintEnd_toEndOf="parent"

@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">FitnessKitTest</string>
+    <string name="menu_lessons">Занятия</string>
+    <string name="menu_tasks">Заявки</string>
+    <string name="menu_add">Добавить</string>
+    <string name="menu_chat">Чат</string>
+    <string name="menu_more">Ещё</string>
 </resources>

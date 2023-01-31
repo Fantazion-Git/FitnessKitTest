@@ -1,7 +1,10 @@
 package com.example.fitnesskittest.presentation
 
 import android.util.Log
-import androidx.lifecycle.*
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import com.example.fitnesskittest.data.FitnessRepo
 import com.example.fitnesskittest.domain.Lesson
 import com.example.fitnesskittest.presentation.mappers.DayModelMapper
@@ -21,30 +24,31 @@ class MainViewModel(private val repo: FitnessRepo) : ViewModel() {
                 val result = sortLessons(lessons)
                 _data.postValue(result)
             } catch (e: Throwable) {
-                Log.e("MainViewModel",e.message ?: e.localizedMessage)
+                Log.e("MainViewModel", e.message ?: e.localizedMessage)
             }
         }
     }
-    private fun sortLessons (lessons: List<Lesson>) : List<FitnessModel>{
+
+    private fun sortLessons(lessons: List<Lesson>): List<FitnessModel> {
         val temp = lessons.sortedBy { it.date }
-        val result : MutableList<FitnessModel> = mutableListOf()
+        val result: MutableList<FitnessModel> = mutableListOf()
         var tempDate = temp.firstOrNull()?.date
         var tempList: MutableList<Lesson> = mutableListOf()
-         temp.forEachIndexed { index,lesson ->
-            if (lesson.date==tempDate){
+        temp.forEachIndexed { index, lesson ->
+            if (lesson.date == tempDate) {
                 tempList.add(lesson)
-            }else{
+            } else {
                 tempList = tempList.sortedBy { it.startTime }.toMutableList()
                 result.add(DayModelMapper.map(tempDate))
-                result.addAll(tempList.map {LessonsModelMapper.map(it)})
-                tempDate=lesson.date
+                result.addAll(tempList.map { LessonsModelMapper.map(it) })
+                tempDate = lesson.date
                 tempList.clear()
                 tempList.add(lesson)
             }
             if (index == temp.lastIndex) {
                 tempList = tempList.sortedBy { it.startTime }.toMutableList()
                 result.add(DayModelMapper.map(tempDate))
-                result.addAll(tempList.map {LessonsModelMapper.map(it)})
+                result.addAll(tempList.map { LessonsModelMapper.map(it) })
             }
         }
         return result
